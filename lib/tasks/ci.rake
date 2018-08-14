@@ -9,3 +9,4 @@ unless Rails.env.production?
       desc 'Run all tests and generate a merged coverage report'
       task tests: [:spec, :cucumber, 'coveralls:push']
     end
+end
