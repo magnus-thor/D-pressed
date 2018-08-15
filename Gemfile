@@ -12,9 +12,17 @@ gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'haml-rails'
 
+
 group :development, :test do
   gem 'chromedriver-helper'
   gem 'selenium-webdriver'
+  gem 'coveralls', require: false
+  gem 'pry-byebug'    
+  gem 'pry-rails'    
+  gem 'rspec-rails'    
+  gem 'shoulda-matchers'    
+  gem 'cucumber-rails', require: false    
+  gem 'database_cleaner'
 end
 
 group :development do

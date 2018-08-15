@@ -1,4 +1,11 @@
+require 'coveralls'
+Coveralls.wear_merged!('rails')
+
 require 'cucumber/rails'
+
+World(FactoryBot::Syntax::Methods)
+
+ActionController::Base.allow_rescue = false
 
 begin
   DatabaseCleaner.strategy = :transaction
