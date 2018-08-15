@@ -102,6 +102,11 @@ GEM
     erubi (1.7.1)
     erubis (2.7.0)
     execjs (2.7.0)
+    factory_bot (4.10.0)
+      activesupport (>= 3.0.0)
+    factory_bot_rails (4.10.0)
+      factory_bot (~> 4.10.0)
+      railties (>= 3.0.0)
     ffi (1.9.25)
     gherkin (5.1.0)
     globalid (0.4.1)
@@ -280,6 +285,7 @@ DEPENDENCIES
   coveralls
   cucumber-rails
   database_cleaner
+  factory_bot_rails
   haml-rails
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
@@ -301,4 +307,4 @@ RUBY VERSION
    ruby 2.4.3p205
 
 BUNDLED WITH
-   1.16.2
+   1.16.3
