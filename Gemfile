@@ -14,6 +14,8 @@ gem 'haml-rails'
 
 
 group :development, :test do
+  gem 'chromedriver-helper'
+  gem 'selenium-webdriver'
   gem 'coveralls', require: false
   gem 'pry-byebug'    
   gem 'pry-rails'    
