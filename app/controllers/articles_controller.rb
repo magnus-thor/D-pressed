@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
     if @article.persisted?
       redirect_to root_path, notice: 'Article successfully created.'
     else
-      flash[:error] = 'Your article could not be saved'
+      flash[:error] = "Fields can't be blank. Your article could not be saved"
       render :new
     end
   end
