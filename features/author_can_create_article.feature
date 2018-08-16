@@ -11,7 +11,7 @@ Feature: Create article
         And I fill in 'Body' field with 'Here is bodytext if a long sad news article'
         And I click 'Create Article' button
         Then I should see 'Article successfully created'
-        And there should be a new article in the database
+        And there should be a Article titled 'My sad news story' in the database
     
     Scenario: User does not fill in Title [Sad path]
         When I fill in 'Body' field with 'Here is bodytext if a long sad news article'
