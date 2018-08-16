@@ -5,13 +5,13 @@ Feature: Visitor can view articles on the landing page
 
     Background:
         Given the following article exists
-        | title          | body                                                             | author          | date   |
-        | This is so sad | A recent report suggest that news are mostly sad. Which is sad.  | Pablo Guera     | 180816 |
+        | title          | body                                                             | author          | created_at   |
+        | This is so sad | A recent report suggest that news are mostly sad. Which is sad.  | Pablo Guera     | 180816       |
 
     Scenario: Visitor can view articles on the landing page
         When I am on the landing page
-        Then I should see the article title 'This is so sad'
-        And I should see the body text 'A recent report suggest that news are mostly sad. Which is sad.'
-        And I should see the author 'Pablo Guera'
-        And I shoudl see the date of publication '180816'
-        
+        Then I should see 'This is so sad'
+        And I should see 'A recent report suggest that news are mostly sad. Which is sad.'
+        And I should see 'Pablo Guera'
+        And I shoudl see '180816'
+
