@@ -24,6 +24,7 @@ group :development, :test do
   gem 'cucumber-rails', require: false    
   gem 'database_cleaner'
   gem 'factory_bot_rails'
+  gem 'launchy'
 end
 
 group :development do
