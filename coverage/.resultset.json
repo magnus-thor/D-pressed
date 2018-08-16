@@ -71,24 +71,14 @@
         0
       ]
     },
-    "timestamp": 1534424098
+    "timestamp": 1534428375
   },
   "Cucumber Features": {
     "coverage": {
-      "/Users/erik/project/dpressed/app/models/article.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/erik/project/dpressed/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
       "/Users/erik/project/dpressed/app/controllers/articles_controller.rb": [
         1,
         1,
-        1,
+        4,
         null,
         null,
         1,
@@ -96,21 +86,21 @@
         null,
         null,
         1,
-        0,
+        3,
         null,
         null,
         1,
-        0,
-        0,
-        0,
+        3,
+        3,
+        1,
         null,
-        0,
-        0,
+        2,
+        2,
         null,
         null,
         1,
         1,
-        0,
+        3,
         null,
         null
       ],
@@ -119,6 +109,16 @@
         null
       ],
       "/Users/erik/project/dpressed/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/erik/project/dpressed/app/models/article.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/erik/project/dpressed/app/models/application_record.rb": [
+        1,
         1,
         null
       ],
@@ -145,6 +145,6 @@
         0
       ]
     },
-    "timestamp": 1534424571
+    "timestamp": 1534428378
   }
 }

@@ -12,6 +12,6 @@ Feature: User can view the full article
     Scenario:
         When I am on the landing page
         And I click on "This is so sad"
-        Then I should be on "Full Article" page
+        Then I am on the 'full article' page
         And I should see "This is so sad"
         And I should see "A recent report suggest that news are mostly sad. Which is sad"
