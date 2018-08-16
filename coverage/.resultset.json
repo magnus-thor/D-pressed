@@ -47,6 +47,11 @@
         0,
         0
       ],
+      "/Users/erik/project/dpressed/app/models/article.rb": [
+        0,
+        0,
+        0
+      ],
       "/Users/erik/project/dpressed/app/models/application_record.rb": [
         0,
         0,
@@ -57,6 +62,13 @@
         0
       ],
       "/Users/erik/project/dpressed/app/controllers/application_controller.rb": [
+        0,
+        0
+      ],
+      "/Users/erik/project/dpressed/app/controllers/articles_controller.rb": [
+        0,
+        0,
+        0,
         0,
         0
       ],
@@ -77,6 +89,6 @@
         0
       ]
     },
-    "timestamp": 1534258058
+    "timestamp": 1534409201
   }
 }
