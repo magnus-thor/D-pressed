@@ -6,8 +6,6 @@ Given("I visit the Create article page") do
     visit new_article_path
 end
 
-
-
 def page_path(path)
     if path == 'This is so sad'
         article_title = Article.find_by(title: path)
