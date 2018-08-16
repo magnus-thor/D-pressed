@@ -16,7 +16,7 @@ Feature: A visitor needs to become a registered user in order to read the articl
         And I fill in 'Password' field with 'my-password'
         And I fill in 'Password confirmation' field with 'my-password'
         And I click on 'Sign up'
-        Then I should see 'Welcome! Registration successfull'
+        Then I should see 'Welcome! You have signed up successfully.'
    
     Scenario: Visitor tries to read article
         When I click on 'This is so sad'
