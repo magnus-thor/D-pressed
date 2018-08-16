@@ -14,8 +14,6 @@ RSpec.describe Article, type: :model do
     it { is_expected.to validate_presence_of :title }
     it { is_expected.to validate_presence_of :body } 
     it { is_expected.to validate_presence_of :author } 
-    it { is_expected.to validate_presence_of :created_at } 
-
 
   end
 
@@ -24,4 +22,4 @@ RSpec.describe Article, type: :model do
       expect(FactoryBot.create(:article)).to be_valid 
     end
   end
-endg
+end
