@@ -16,9 +16,7 @@
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
-.coverage/.resultset.json
-.coverage/.resultset.json.lock
-.coverage/.last_run.json
+/coverage/*
 
 /node_modules
 /yarn-error.log
