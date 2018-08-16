@@ -3,5 +3,5 @@ FactoryBot.define do
         title "MyString"
         body "MyText"
         author "MyString"
-      end
     end
+end
