@@ -41,38 +41,42 @@
   },
   "Cucumber Features": {
     "coverage": {
+      "/Users/erik/project/dpressed/app/models/article.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/erik/project/dpressed/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/erik/project/dpressed/app/controllers/articles_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/erik/project/dpressed/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/erik/project/dpressed/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
       "/Users/erik/project/dpressed/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/erik/project/dpressed/app/models/article.rb": [
-        0,
-        0,
-        0
-      ],
-      "/Users/erik/project/dpressed/app/models/application_record.rb": [
-        0,
-        0,
-        0
-      ],
       "/Users/erik/project/dpressed/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/Users/erik/project/dpressed/app/controllers/application_controller.rb": [
-        0,
-        0
-      ],
-      "/Users/erik/project/dpressed/app/controllers/articles_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/erik/project/dpressed/app/helpers/application_helper.rb": [
         0,
         0
       ],
@@ -89,6 +93,6 @@
         0
       ]
     },
-    "timestamp": 1534409201
+    "timestamp": 1534419967
   }
 }
