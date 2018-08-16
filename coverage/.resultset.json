@@ -71,7 +71,7 @@
         0
       ]
     },
-    "timestamp": 1534428375
+    "timestamp": 1534429131
   },
   "Cucumber Features": {
     "coverage": {
@@ -88,11 +88,11 @@
       "/Users/erik/project/dpressed/app/controllers/articles_controller.rb": [
         1,
         1,
+        1,
+        null,
+        null,
+        1,
         2,
-        null,
-        null,
-        1,
-        1,
         null,
         null,
         1,
@@ -145,6 +145,6 @@
         0
       ]
     },
-    "timestamp": 1534428798
+    "timestamp": 1534429485
   }
 }
