@@ -1,2 +1,7 @@
-%h1 Articles#index
-%p Find me in app/views/articles/index.html.haml
+- @articles.each do |article|
+  %p= article.title
+  %p= article.body
+  %p= article.created_at
+  %p= article.author
+  
+

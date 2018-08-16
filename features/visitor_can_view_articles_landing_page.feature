@@ -13,5 +13,5 @@ Feature: Visitor can view articles on the landing page
         Then I should see 'This is so sad'
         And I should see 'A recent report suggest that news are mostly sad. Which is sad.'
         And I should see 'Pablo Guera'
-        And I shoudl see '180816'
+        And I should see '180816'
 
