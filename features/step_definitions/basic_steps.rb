@@ -9,3 +9,7 @@ end
 When("I click {string} button") do |button|
     click_button button
 end
+
+And ('I click on {string}') do |element|
+    click_on(element)
+end
