@@ -1,10 +1,10 @@
 Feature: User can view the full article
-     As a visitor,
+    As a visitor,
     In order to read the full article,
     I would like to be able to access the article page.
 
     Background:
-        Given the following articles exist
+        Given the following article exists
         | title          | body                                                             | author          | date   |
         | This is so sad | A recent report suggest that news are mostly sad. Which is sad.  | Pablo Guera     | 180816 |
 
