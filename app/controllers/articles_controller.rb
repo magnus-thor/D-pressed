@@ -9,7 +9,6 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
   end
-  
   def new
     @article = Article.new
   end
@@ -22,10 +21,9 @@ class ArticlesController < ApplicationController
       flash[:error] = 'Fields cant be blank. Your article could not be saved'
     end
   end
-  private
-
-  def article_params
+  
+   private
+   def article_params
     params.require(:article).permit(:title, :body)
   end
-
 end
