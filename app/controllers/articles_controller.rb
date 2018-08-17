@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :create, :new]
+  before_action :authenticate_user!, except: [:index]
+
 
   
   def index
@@ -8,6 +9,9 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    unless current_user
+      redirect_to new_user_registration_path
+    end
   end
   def new
     @article = Article.new

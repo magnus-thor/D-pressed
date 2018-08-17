@@ -5,9 +5,8 @@ Feature: A visitor needs to become a registered user in order to read the articl
 
     Background:
         Given the following article exists
-        | title             | body                                        |       
-        | My sad news story | Here is bodytext if a long sad news article |       
-    
+        | title          | body                                                             | 
+        | This is so sad | A recent report suggest that news are mostly sad. Which is sad.  | 
 
     Scenario: Visitor registers
         When I am on the 'Landing' page
@@ -20,6 +19,7 @@ Feature: A visitor needs to become a registered user in order to read the articl
         Then I should see 'Welcome! You have signed up successfully.'
    
     Scenario: Visitor tries to read article 
-        When I click on 'My sad news story'
-        Then I should see 'You need to register to read the article'
-        And I am on the 'Registration' page
+        When I am on the 'Landing' page
+        And I click on "This is so sad"
+        Then I should be redirected to the "Registration" page
+
