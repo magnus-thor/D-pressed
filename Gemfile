@@ -11,7 +11,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'haml-rails'
-
+gem 'devise'
 
 group :development, :test do
   gem 'chromedriver-helper'
@@ -24,6 +24,7 @@ group :development, :test do
   gem 'cucumber-rails', require: false    
   gem 'database_cleaner'
   gem 'factory_bot_rails'
+  gem 'launchy'
 end
 
 group :development do
