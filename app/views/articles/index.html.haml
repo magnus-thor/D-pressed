@@ -1,9 +1,7 @@
 - @articles.each do |article|
+  = link_to article.title, article_path(article)
   %p= article.title
   %p= article.body
   %p= article.created_at.to_date
 
 = link_to 'Registration', new_user_registration_path
-
-  
-
