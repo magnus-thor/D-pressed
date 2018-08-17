@@ -1,7 +1,7 @@
 Feature: Create article
-    As an User,
-    In order to publish news,
-    I would like to be able to create an article.
+    As an User
+    In order to publish news
+    I would like to be able to create an article
 
     Background:
         Given the following user exists

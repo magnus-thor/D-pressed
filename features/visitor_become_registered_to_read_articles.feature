@@ -1,7 +1,7 @@
 Feature: A visitor needs to become a registered user in order to read the articles
-    As a Visitor, 
-    In order to be able to read the articles,
-    I would like to become a registered (non paying) User. 
+    As a Visitor
+    In order to be able to read the articles
+    I would like to become a registered (non paying) User
 
     Background:
         Given the following article exists

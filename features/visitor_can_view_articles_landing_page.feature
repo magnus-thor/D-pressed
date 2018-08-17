@@ -1,7 +1,7 @@
 Feature: Visitor can view articles on the landing page
-    As an Editor,
-    In order to catch people's interest,
-    I would like to have the articles displayed on the landing page.
+    As an Editor
+    In order to catch people's interest
+    I would like to have the articles displayed on the landing page
 
     Background:
         Given the following article exists
