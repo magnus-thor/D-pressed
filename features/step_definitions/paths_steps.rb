@@ -16,3 +16,7 @@ def page_path(path)
         root_path
     end
 end
+
+Then("I should be redirected to the {string}") do |page|
+    visit page_path(page)
+end
