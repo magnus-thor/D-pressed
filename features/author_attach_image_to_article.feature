@@ -17,3 +17,4 @@ Feature: Author can attach an image to the article
         Then there should be a Article titled 'My sad news story' in the database
         And I should see 'Article successfully created'
         And I should see 'My sad news story'
+        And I should see the '' image
