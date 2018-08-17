@@ -7,5 +7,5 @@ Feature: Display ads on the landing page
 
     Scenario: Display ads on the landing page
         When I am on the landing page
-        Then I should see ad 'ad1'
+        Then I should see the ad ".right_ad"
         

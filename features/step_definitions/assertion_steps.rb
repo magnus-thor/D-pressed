@@ -6,6 +6,6 @@ And("there should be a Article titled {string} in the database") do |expected_ti
     expect(Article.last.title).to eq expected_title
 end
 
-Then("I should see ad {string}") do |ad1|
-    expect(page).to have_css('.ad1')
+Then("I should see the ad {string}") do |ad_name|
+    expect(page).to have_css(ad_name)
 end
