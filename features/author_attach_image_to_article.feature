@@ -4,9 +4,11 @@ Feature: Author can attach an image to the article
     I would like to be able to attach an image to the article.
 
     Background:
-        Given the following article exists
-        | title          | body                                                             | 
-        | This is so sad | A recent report suggest that news are mostly sad. Which is sad.  |
+        Given the following user exists
+        | email          | password    |
+        | pablo@test.com | my-password |
+        And I am logged in as 'pablo@test.com'
+        And I visit the Create article page
 
         Scenario: Successfully create Article [Happy path]
         When I fill in 'Title' field with 'My sad news story'
