@@ -14,6 +14,10 @@ RSpec.describe Article, type: :model do
     it { is_expected.to validate_length_of :title }
   end
 
+  describe 'Associations' do  
+    it {is_expected.to belong_to :user}
+  end
+
   describe 'Factory' do
     it 'should have valid Factory' do
       expect(create(:article)).to be_valid 
