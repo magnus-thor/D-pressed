@@ -5,3 +5,8 @@ end
 And("there should be a Article titled {string} in the database") do |expected_title|
     expect(Article.last.title).to eq expected_title
 end
+
+When("I attach an image-file") do
+    
+end
+  
