@@ -19,6 +19,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.create(article_params)
+    @article.image.attach(params[:article][:image])
     if @article.persisted?
       flash[:notice] = 'Article successfully created.'
     else
