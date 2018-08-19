@@ -7,6 +7,10 @@ Feature: Author can attach an image to the article
         Given the following user exists
         | email          | password    |
         | pablo@test.com | my-password |
+           
+        And the following article exists
+        | title          | body                                                             | image   |
+        | This is so sad | A recent report suggest that news are mostly sad. Which is sad.  | sad.png |
         And I am logged in as 'pablo@test.com'
         And I visit the Create article page
 
@@ -19,4 +23,4 @@ Feature: Author can attach an image to the article
         Then there should be a Article titled 'My sad news story' in the database
         And I should see 'Article successfully created'
         And I should see 'My sad news story'
-        And I should see the '' image
+        And I should see the 'sad.png' image
