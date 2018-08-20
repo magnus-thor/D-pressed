@@ -10,6 +10,7 @@ Feature: Create article
         And I am logged in as 'pablo@test.com'
         And I visit the Create article page
 
+
     Scenario: Successfully create Article [Happy path]
         When I fill in 'Title' field with 'My sad news story'
         And I fill in 'Body' field with 'Here is bodytext if a long sad news article'
