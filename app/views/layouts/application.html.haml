@@ -19,9 +19,8 @@
 
   .articles
     = yield
-  = notice
-  = flash[:error]
-
-
+    = flash[:notice]
+    = flash[:error]
+    = notice
 
 

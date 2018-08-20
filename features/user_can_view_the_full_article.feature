@@ -6,10 +6,14 @@ Feature: User can view the full article
     Background:
         Given the following article exists
         | title          | body                                                             | 
-        | This is so sad | A recent report suggest that news are mostly sad. Which is sad.  | 
+        | This is so sad | A recent report suggest that news are mostly sad. Which is sad.  |
+        And the following user exists
+        | email          | password    |
+        | pablo@test.com | my-password |
+        And I am logged in as 'pablo@test.com'
 
     Scenario:
-        When I am on the landing page
+        When I am on the 'landing' page
         And I click on "This is so sad"
         Then I am on the "This is so sad" page
         And I should see "This is so sad"

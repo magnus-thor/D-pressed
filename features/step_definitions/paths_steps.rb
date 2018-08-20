@@ -10,11 +10,14 @@ def page_path(path)
     if path == 'This is so sad'
         article_title = Article.find_by(title: path)
         article_path(article_title)
-        else
+    elsif path == 'Registration'
+        new_user_registration_path
+    else
         root_path
     end
 end
 
-When("I am on the landing page") do
-    visit root_path
+When("I should be redirected to the {string} page") do |page|
+    visit page_path(page)    
 end
+  
