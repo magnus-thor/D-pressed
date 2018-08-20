@@ -1,8 +1,9 @@
 class User < ApplicationRecord
-  enum role: [:user, :subscriber, :author, :editor]
-  has_many :articles
-
   after_initialize :set_default_role, :if => :new_record?
+  
+  enum role: [:user, :subscriber, :author, :editor]
+  
+  has_many :articles
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
