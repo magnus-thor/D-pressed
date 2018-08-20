@@ -8,5 +8,9 @@ end
 
 Given("the date is {string}") do |date_string|
     date = Date.parse(date_string)
-    Timecop.freeze(date)
+    Timecop.travel(date)
   end
+
+After do
+    Timecop.return
+end
