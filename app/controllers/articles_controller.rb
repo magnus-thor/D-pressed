@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
+
   
   def index
     @articles = Article.all
@@ -16,9 +17,10 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.create(article_params)
     if @article.persisted?
-      flash[:notice] = 'Article successfully created.'
+      redirect_to root_path, notice: 'Article successfully created.'
     else
       flash[:error] = 'Fields can\'t be blank. Your article could not be saved'
+      render :new
     end
   end
   
