@@ -2,6 +2,9 @@
   %strong Title:
   = @article.title
 %p
+  Published on:
+  = @article.created_at.to_date
+%p
   %strong Text:
   = @article.body
 
