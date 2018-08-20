@@ -26,10 +26,10 @@ Feature: Create article
         When I fill in 'Body' field with 'Here is bodytext if a long sad news article'
         And I click on 'Create Article' 
         And I should be redirected to the 'landing' page
-        Then I should see 'Fields cant be blank. Your article could not be saved'
+        Then I should see "Fields can't be blank. Your article could not be saved"
 
     Scenario: Author does not fill in Body [Sad path]
         When I fill in 'Title' field with 'My sad news story'
         And I click on 'Create Article'
         And I should be redirected to the 'landing' page
-        Then I should see "Fields cant be blank. Your article could not be saved"
+        Then I should see "Fields can't be blank. Your article could not be saved"
