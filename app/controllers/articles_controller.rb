@@ -15,6 +15,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    authorize @article
     @article = current_user.articles.create(article_params)
     if @article.persisted?
       redirect_to root_path, notice: 'Article successfully created.'
