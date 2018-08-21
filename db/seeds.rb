@@ -1,4 +1,5 @@
-DatabaseCleaner.clean_with :truncation
+User.all.each {|user| user.destroy}
+Article.all.each {|article| article.destroy}
 
 user = User.create(email: Faker::Internet.email, password: Faker::Number.number(10))
 
