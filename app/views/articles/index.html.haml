@@ -1,6 +1,7 @@
 
-= link_to 'Registration' , new_user_registration_path
+.right_ad{:style => "float:right;"}
 
+  = link_to image_tag("shared_wed_hosting.jpeg"), "https://craftacademy.se/"
 %br/
 
 - @articles.each do |article|
@@ -21,11 +22,3 @@
           %div.text-grey-dark= article.created_at.to_date
   %br/
 
-
-
-
-
-
-    
-
-  
