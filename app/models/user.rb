@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   after_initialize :set_default_role, :if => :new_record?
   
-  enum role: [{user: 0}, {subscriber: 2}, {author: 4}, {editor: 8}]
+  enum role: [{basic_user: 0}, {subscriber: 2}, {author: 4}, {editor: 8}]
   
   has_many :articles
   
@@ -9,6 +9,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   def set_default_role
-    self.role ||= :user
+    self.role ||= :basic_user
   end
 end
