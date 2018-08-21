@@ -29,10 +29,10 @@ Feature: Assign Roles to different Users
         When I am logged in as 'author@user.se'
         And I am on the 'Landing' page
         And I click on 'New Article'
-        Then I should be redirected to the 'create article' page
+        Then I should be redirected to the 'Create Article' page
 
     Scenario: Editor tries to access Create Article page
         When I am logged in as 'editor@user.se'
         And I am on the 'Landing' page
         And I click on 'New Article'
-        And I should be redirected to the 'create article' page
+        And I should be redirected to the 'Create Article' page
