@@ -1,5 +1,7 @@
 - @articles.each do |article|
-  = image_tag article.image
+  - if article.image.attached?
+    = image_tag article.image
+  %br
   = link_to article.title, article_path(article)
   %p= article.title
   %p= article.body
