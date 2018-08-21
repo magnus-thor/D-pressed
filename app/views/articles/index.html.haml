@@ -5,3 +5,4 @@
   %p= article.created_at.to_date
 
 = link_to 'Registration' , new_user_registration_path
+= link_to "My account", user_path(current_user)
