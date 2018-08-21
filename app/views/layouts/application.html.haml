@@ -10,14 +10,10 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   
   %body
-    .navbar
-    = render "shared/navbar"
-
-  %div.articles
-
-    = yield
     = flash[:notice]
     = flash[:error]
     = notice
+    = yield
+
 
 

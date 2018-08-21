@@ -1,6 +1,11 @@
+= link_to 'Registration' , new_user_registration_path
+.right_ad{:style => "float:right;"}
+  = link_to image_tag("test.png"), "https://craftacademy.se/"
+%br/
 - @articles.each do |article|
   = link_to article.title, article_path(article)
   %p= article.title
   %p= article.body
-  %p= article.created_at.to_date
-
+  %p
+    Published on:
+    = article.created_at.to_date

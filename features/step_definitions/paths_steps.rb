@@ -12,12 +12,9 @@ def page_path(path)
         article_path(article_title)
     elsif path == 'Registration'
         new_user_registration_path
+    elsif path == 'Login'
+        new_user_session_path
     else
         root_path
     end
-end
-
-When("I should be redirected to the {string} page") do |page|
-    visit page_path(page)    
-end
-  
+end  
