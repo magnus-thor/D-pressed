@@ -1,4 +1,7 @@
 
+= link_to 'Registration' , new_user_registration_path
+
+%br/
 - @articles.each do |article|
   = link_to article.title, article_path(article)
   %p= article.title
@@ -6,5 +9,3 @@
   %p
     Published on:
     = article.created_at.to_date
-
-= link_to 'Registration' , new_user_registration_path
