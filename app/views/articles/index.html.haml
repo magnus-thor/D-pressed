@@ -1,3 +1,7 @@
+= link_to 'Registration' , new_user_registration_path
+.right_ad{:style => "float:right;"}
+  = link_to image_tag("test.png"), "https://craftacademy.se/"
+%br/
 - @articles.each do |article|
   - if article.image.attached?
     = image_tag article.image
@@ -8,6 +12,3 @@
   %p
     Published on:
     = article.created_at.to_date
-  %p= article.created_at.to_date
-
-= link_to 'Registration' , new_user_registration_path
