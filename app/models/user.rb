@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   after_initialize :set_default_role, :if => :new_record?
   
-  enum role: [:user, :subscriber, :author, :editor]
+  enum role: [{user: 0}, {subscriber: 2}, {author: 4}, {editor: 8}]
   
   has_many :articles
   
