@@ -5,6 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
+.DS_Store
 /.bundle
 
 # Ignore all logfiles and tempfiles.
@@ -17,6 +18,7 @@
 /storage/*
 !/storage/.keep
 /coverage/
+/assets/images/
 
 /node_modules
 /yarn-error.log

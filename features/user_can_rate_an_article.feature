@@ -4,6 +4,7 @@ Feature: User can rate an article
     I would like to be able to rate it.
 
     Background:
+        Given the date is "2018-08-18"
         Given the following article exist
         | title          | body                                                             | 
         | This is so sad | A recent report suggest that news are mostly sad. Which is sad.  |
@@ -20,6 +21,6 @@ Feature: User can rate an article
         And I should see "A recent report suggest that news are mostly sad. Which is sad"
         And I should see "Published on: 2018-08-18"
         And I click "5" on rating
-        Then I should see "Thank you for your vote"
+        Then I should see "Thank you, for your vote"
         And the average rating for "This is so sad" should be "5"
 
