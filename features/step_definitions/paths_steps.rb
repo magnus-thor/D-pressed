@@ -14,6 +14,8 @@ def page_path(path)
         new_user_registration_path
     elsif path == 'My account'
         user_path(@user)
+    elsif path == 'Edit my account'
+        edit_user_registration_path(@user)
     else
         root_path
     end
