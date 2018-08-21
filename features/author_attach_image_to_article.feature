@@ -1,3 +1,4 @@
+@javascript
 Feature: Author can attach an image to the article 
     As an Author,
     In order to provide more value to my readers,
