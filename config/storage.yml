@@ -14,16 +14,6 @@ amazon:
   region: us-east-1
   bucket: app-bucket
 
-  amazon_<%= Rails.env %>:
-  service: S3
-  access_key_id:
-    <%= Rails.application.credentials.dig(
-      Rails.env.to_sym, :aws, :access_key_id) %>
-  secret_access_key:
-    <%= Rails.application.credentials.dig(
-      Rails.env.to_sym, :aws, :secret_access_key) %>
-  region: us-east-1
-  bucket: app-<%= Rails.env %>
 
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
