@@ -1,11 +1,17 @@
-body {
-    background: #52bf90;
+.html {
+    background: black;
+    display: flex; 
+    position: relative;
     animation: fadeIn 2s ease-in;
+    font: "Lato", "lucida Grande", "Lucida Sans Unicode";
+    font-size: 15px;
+}
 
 .articles {
    font: Lobster;
 }
 
+/*
 
 main {
     position: relative;
@@ -62,8 +68,8 @@ main {
     z-index: 1;
   }
   
-  /* Keyframes */
-  
+
+/*
   @-webkit-keyframes fadeInOut {
     0% {
       opacity: 0;
@@ -98,4 +104,4 @@ main {
         transform: translatey(0px);
     }
   }
-}
+  */
