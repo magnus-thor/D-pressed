@@ -1,15 +1,14 @@
 class ArticlePolicy < ApplicationPolicy
-    
-    def index?
-        true
-    end
 
-    def new?
-        @user.author? || @user.editor?
-    end
+  def create?
+    user == user.author? || user.editor?
+  end
 
-    def create?
-        new?
-    end
+  def index?
+    true
+  end
 
+  def show?
+    user ==  user.author? || user.editor? || user.subscriber?
+  end
 end
