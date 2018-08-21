@@ -18,7 +18,6 @@
 /storage/*
 !/storage/.keep
 /coverage/
-/assets/images/
 
 /node_modules
 /yarn-error.log
