@@ -4,7 +4,8 @@ Feature: User can view the full article
     I would like to be able to access the article page.
 
     Background:
-        Given the following article exists
+        Given the date is "2018-08-18"
+        Given the following article exist
         | title          | body                                                             | 
         | This is so sad | A recent report suggest that news are mostly sad. Which is sad.  |
         And the following user exists
@@ -18,4 +19,4 @@ Feature: User can view the full article
         Then I am on the "This is so sad" page
         And I should see "This is so sad"
         And I should see "A recent report suggest that news are mostly sad. Which is sad"
-        And I should see "2018-08-17"
+        And I should see "Published on: 2018-08-18"
