@@ -15,7 +15,7 @@ After do
     Timecop.return
 end
 When("I attach an image-file") do
-    attach_file('article_image', "#{::Rails.root}/spec/fixtures/sad.png")
+    attach_file("#{::Rails.root}/spec/fixtures/dummy.jpeg")
 end
 
 Then("I should see the {string} image") do |file_name|
