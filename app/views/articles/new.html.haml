@@ -9,6 +9,10 @@
   %br/
   = form.text_area :body
   %br/
+  = form.label :image
+  %br/
+  = form.file_field :image
+  %br/
   = form.submit 'Create Article'
 
 = link_to 'Back', articles_path

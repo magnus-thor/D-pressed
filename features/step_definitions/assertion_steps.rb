@@ -14,3 +14,11 @@ Given("the date is {string}") do |date_string|
 After do
     Timecop.return
 end
+When("I attach an image-file") do
+    attach_file('article_image', "#{::Rails.root}/spec/fixtures/sad.png")
+end
+
+Then("I should see the {string} image") do |file_name|
+    expect(page).to have_selector "img[src$='#{file_name}']"
+end
+  

@@ -16,6 +16,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.create(article_params)
+    @article.image.attach(params[:article][:image])
     if @article.persisted?
       redirect_to root_path, notice: 'Article successfully created.'
     else
