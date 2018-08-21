@@ -12,3 +12,8 @@
   %strong Text:
   = @article.created_at.to_date
 
+%p.rating
+  Rate
+  - 5.times do |i|
+    = button_tag "#{i + 1}", data: {rating: "#{i + 1}"}
+
