@@ -1,5 +1,3 @@
-require 'faker'
-
 user = User.new(email: Faker::Internet.email, password: Faker::Number.number(10))
 
 10.times do
