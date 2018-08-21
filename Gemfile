@@ -28,6 +28,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'launchy'
   gem 'timecop'
+  gem 'pundit-matchers', '~> 1.6.0'
 end
 
 group :development do
