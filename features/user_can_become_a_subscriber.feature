@@ -11,7 +11,7 @@ Feature: User can become a Subscriber
 
     Scenario: Basic_user presses button to become a Subscriber
         When I am logged in as 'pablo@test.com'
-        And I am on the 'User' page
+        And I am on the 'My account' page
         Then my user role should be displayed as 'basic_user'
         And I click 'Subscribe' button
         Then I should see 'You have succesfully subscribed to D-pressed'
