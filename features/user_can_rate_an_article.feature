@@ -1,3 +1,4 @@
+@javascript
 Feature: User can rate an article
     As a User,
     In order to leave my feedback to the article that I have just read,
@@ -13,7 +14,6 @@ Feature: User can rate an article
         | pablo@test.com | my-password |
         And I am logged in as 'pablo@test.com'
     
-    @javascript   
     Scenario:
         When I am on the 'landing' page
         And I click on "This is so sad"
@@ -22,7 +22,7 @@ Feature: User can rate an article
         And I should see "A recent report suggest that news are mostly sad. Which is sad"
         And I should see "Published on: 2018-08-18"
         And I click "1" on rating
-        Then show me the page
-        Then I should see the notice "Thank you, for your vote"
+        And I wait 1 second
+        Then I should see the notice "Thank you for your vote"
         And the average rating for "This is so sad" should be "1"
 

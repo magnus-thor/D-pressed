@@ -1,3 +1,5 @@
+.notice
+.alert
 %p
   %strong Title:
   = @article.title
@@ -7,40 +9,21 @@
 %p
   %strong Text:
   = @article.body
-
-%p
 #rating
-  Rate
+  %p
+    Rate  
   - 5.times do |rate|
     = button_tag "#{rate + 1}", data: {rating: "#{rate + 1}"}
 
+
+.stars#star-rating
+  %form{action: ""}
+    - 5.times do |rating|
+      %input{name: "star", type: "radio", id: "star-#{rating + 1}", class: "star star-#{rating + 1} stars", data: {rating: "#{rating + 1}"}}
+      %label{for: "star-#{rating + 1}", class: "star star-#{rating + 1}"}
+   
+
+
 :javascript
-    console.log('LOADED!')  
-    let ratingButtons = document.querySelectorAll('button')
-    let noticeDiv = document.querySelector('.notice')
-    let alertDiv = document.querySelector('.alert')
-    let ratingDiv = document.querySelector('#rating')
-    ratingButtons.forEach((button)=>{
-      button.addEventListener('click',(event)=>{
-        event.preventDefault()
-        let value = button.dataset.rating
-        let body = JSON.stringify({rating: value })
-        fetch("#{ratings_path(@article)}", {
-          method: 'POST',
-          body: body,
-          credentials: 'include',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-Requested-With': 'XMLHttpRequest',
-            'X-CSRF-Token': Rails.csrfToken()
-        }}).then(function(response) {
-          return response.json();
-        }).then(function(data) {
-          noticeDiv.innerHTML = data.message
-          ratingDiv.style.display = 'none'
-          console.log(data)
-        }).catch((error) => {
-          alertDiv.innerHTML = data.error
-          console.log(error)
-        });
-    })
+  handleRating("#{article_ratings_path(@article)}")
+  handleStarRating("#{article_ratings_path(@article)}")
