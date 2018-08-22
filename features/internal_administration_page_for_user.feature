@@ -10,6 +10,7 @@ Feature: Internal administration page for user
         And I am logged in as 'pablo@test.com'
 
 
+
     Scenario: Visitor registers
         When I am on the 'Landing' page
         And I click on 'My account'
