@@ -2,6 +2,8 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = link_to_unless_current 'English', locale: "en"
+    = link_to_unless_current 'Svenska', locale: "se"
     %title DPressed
     = csrf_meta_tags
     = csp_meta_tag
