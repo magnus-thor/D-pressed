@@ -5,14 +5,24 @@ Feature: User can become a Subscriber
 
     Background: 
         Given the following user exists
-        | email          | password    | role       |
-        | pablo@test.com | my-password | basic_user |
-        And I am logged in as 'pablo@test.com'
+        | email          | role       |
+        | pablo@test.com | basic_user |
+        | sub@scriber.se | subscriber |
 
     Scenario: Basic_user presses button to become a Subscriber
-        When I am on the 'User' page
-        And my user role is displayed as 'basic_user'
-        Then I click 'Subscribe' button
+        When I am logged in as 'pablo@test.com'
+        And I am on the 'User' page
+        Then my user role should be displayed as 'basic_user'
+        And I click 'Subscribe' button
         Then I should see 'You have succesfully subscribed to D-pressed'
-        And my user should be 'subscriber'
+        And my user role should be displayed as 'subscriber'
+        And I should be on the 'User' page
+
+    Scenario: Subcsriber presses button to become a Subscriber
+        When I am logged in as 'sub@scriber.se'
+        And I am on the 'User' page
+        Then my user role is displayed as 'subscriber'
+        And I click 'Subscribe' button
+        Then I should see 'You are already subscribed'
+        And my user role should be displayed as 'subscriber'
         And I should be on the 'User' page
