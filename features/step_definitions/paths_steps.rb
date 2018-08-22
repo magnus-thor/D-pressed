@@ -16,12 +16,9 @@ def page_path(path)
         user_path(@user)
     elsif path == 'Edit my account'
         edit_user_registration_path(@user)
+    elsif path == 'Login'
+        new_user_session_path
     else
         root_path
     end
-end
-
-When("I should be redirected to the {string} page") do |page|
-    visit page_path(page)    
-end
-  
+end  

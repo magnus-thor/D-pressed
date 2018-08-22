@@ -22,5 +22,5 @@ Feature: A visitor needs to become a registered user in order to read the articl
     Scenario: Visitor tries to read article 
         When I am on the 'Landing' page
         And I click on "This is so sad"
-        Then I should be redirected to the "Registration" page
+        Then I should be redirected to the "Login" page
 

@@ -1,3 +1,11 @@
+Then('stop') do 
+    binding.pry
+end
+
+Given("I wait {int} second(s)") do |seconds|
+    sleep seconds
+end
+
 Then('show me the page') do
     save_and_open_page
 end
