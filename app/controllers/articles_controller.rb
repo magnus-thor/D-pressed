@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
       redirect_to new_user_registration_path
     end
   end
+  
   def new
     @article = Article.new
   end
