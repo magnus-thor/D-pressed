@@ -22,3 +22,8 @@ end
 Then("I should be redirected to the {string} page") do |page|
     expect(current_path).to eq page_path(page)    
 end
+
+Then("I should be on the show page for {string}") do |article_title|
+    article = Article.find_by(title: article_title)
+    expect(current_path).to eq article_path(article)
+end
