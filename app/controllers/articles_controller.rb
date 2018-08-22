@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-
   
   def index
     @articles = Article.all
@@ -13,10 +12,10 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    authorize @article
   end
 
   def create
-    authorize @article
     @article = current_user.articles.create(article_params)
     if @article.persisted?
       redirect_to root_path, notice: 'Article successfully created.'
@@ -27,7 +26,8 @@ class ArticlesController < ApplicationController
   end
   
    private
-   def article_params
+  def article_params
     params.require(:article).permit(:title, :body)
   end
+
 end

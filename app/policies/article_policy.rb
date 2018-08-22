@@ -4,6 +4,10 @@ class ArticlePolicy < ApplicationPolicy
     current_user.author? || current_user.editor?
   end
 
+  def new?
+    current_user.author? || current_user.editor?
+  end
+
   def index?
     true
   end

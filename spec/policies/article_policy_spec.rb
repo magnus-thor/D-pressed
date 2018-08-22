@@ -8,7 +8,7 @@ RSpec.describe ArticlePolicy do
         let(:user) { create(:user, email: 'new@email.dk', role: 'basic_user') }
 
         it { is_expected.to permit_actions [:index] }
-        it { is_expected.to forbid_actions [:create] }
+        it { is_expected.to forbid_actions [:create, :show] }
     end
 
     context 'user is a subscriber' do
