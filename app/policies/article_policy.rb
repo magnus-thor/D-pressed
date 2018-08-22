@@ -1,7 +1,7 @@
 class ArticlePolicy < ApplicationPolicy
 
   def create?
-    user == user.author? || user.editor?
+    current_user.author? || current_user.editor?
   end
 
   def index?
@@ -9,6 +9,6 @@ class ArticlePolicy < ApplicationPolicy
   end
 
   def show?
-    user ==  user.author? || user.editor? || user.subscriber?
+    current_user.author? || current_user.editor? || current_user.subscriber?
   end
 end
