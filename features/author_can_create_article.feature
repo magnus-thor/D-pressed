@@ -6,8 +6,8 @@ Feature: Create article
 
     Background:
         Given the following user exists
-            | email          | password    | role   |
-            | pablo@test.com | my-password | author |
+            | email          | role   |
+            | pablo@test.com | author |
         And the date is "2018-08-19"
         And I am logged in as 'pablo@test.com'
         And I visit the Create article page

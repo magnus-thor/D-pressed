@@ -12,9 +12,9 @@ Feature: User can view the full article
         | This is so fun | A recent report suggest that news are mostly fun. Which is fun.  |
 
         And the following user exists
-        | email             | password    | role       |
-        | pablo@test.com    | my-password | basic_user |
-        | pablo2@test.com   | my-password | subscriber |
+        | email             | role       |
+        | pablo@test.com    | basic_user |
+        | pablo2@test.com   | subscriber |
 
     Scenario: Pablo can NOT see article page
         When I am logged in as 'pablo@test.com'

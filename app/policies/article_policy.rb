@@ -13,6 +13,6 @@ class ArticlePolicy < ApplicationPolicy
   end
 
   def show?
-    current_user.author? || current_user.editor? || current_user.subscriber?
+    !current_user.basic_user?
   end
 end

@@ -19,10 +19,10 @@ RSpec.describe User, type: :model do
   end
 
   describe 'User roles' do
-    let(:basic_user) {create :user, email: 'basic_user@test.se', role: :basic_user}
-    let(:subscriber) {create :user, email: 'subscriber@test.se', role: :subscriber}
-    let(:author) {create :user, email: 'author@test.se', role: :author}
-    let(:editor) {create :user, email: 'editor@test.se', role: :editor}
+    let(:basic_user) {create :user, role: :basic_user}
+    let(:subscriber) {create :user, role: :subscriber}
+    let(:author) {create :user, role: :author}
+    let(:editor) {create :user, role: :editor}
 
     it 'basic_user responds true if role is basic_user' do
       expect(basic_user.basic_user?).to eq true

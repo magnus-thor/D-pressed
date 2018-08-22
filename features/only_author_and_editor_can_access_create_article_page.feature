@@ -5,12 +5,12 @@ Feature: Assign Roles to different Users
     I would like to be able to apply different roles to Users.
 
     Background:
-        Given the following users exists
-        |email              |password   |role       |
-        |user@user.se       |my-password|basic_user |
-        |subscriber@user.se |my-password|subscriber |
-        |author@user.se     |my-password|author     |
-        |editor@user.se     |my-password|editor     |
+        Given the following users exist
+        |email              |role       |
+        |user@user.se       |basic_user |
+        |subscriber@user.se |subscriber |
+        |author@user.se     |author     |
+        |editor@user.se     |editor     |
 
     Scenario: User tries to access Create Article page
         When I am logged in as 'user@user.se'
