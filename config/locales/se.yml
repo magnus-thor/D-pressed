@@ -1,2 +1,14 @@
 se: 
-  
+  flash[:error]: Fält kan inte vara tomma. Din artikel kunde inte sparas
+  article_successfully_created: Artikel skapad.
+  published_on: Publicerad 
+  Registration: Registrering
+  password: Lösenord
+  characters_minimum: minimum tecken
+  new-password: Nytt lösenord
+  remember_me: Kommer ihåg mig
+  Sign_up: Signa upp mig
+  password_confirmation: lösenordsbekräftelse
+  Log_in: Logga in
+  characters_minimum: minimum tecken
+  create_article: Skapa artikel
