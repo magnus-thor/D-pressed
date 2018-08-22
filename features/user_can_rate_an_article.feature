@@ -12,7 +12,8 @@ Feature: User can rate an article
         | email          | password    |
         | pablo@test.com | my-password |
         And I am logged in as 'pablo@test.com'
-        
+    
+    @javascript   
     Scenario:
         When I am on the 'landing' page
         And I click on "This is so sad"
@@ -22,6 +23,6 @@ Feature: User can rate an article
         And I should see "Published on: 2018-08-18"
         And I click "1" on rating
         Then show me the page
-        Then I should see "Thank you, for your vote"
+        Then I should see the notice "Thank you, for your vote"
         And the average rating for "This is so sad" should be "1"
 

@@ -5,9 +5,8 @@ class RatingsController < ApplicationController
         @article = Article.find(params[:id])
         @rating = article.ratings.create(value: params[:rating].to_i, user: current_user)
         if @rating.persisted?
-            flash[:notice] = 'Thank you, for your vote'
-            render :new
+            render json: { message: 'Thank you for your vote'}, status: :ok
         else
-            flash[:error] = 'An error occured. Your vote was not submitted' 
+            render json: { error: 'An error occured'}, status: :unprocessable_entity
         end
     end
