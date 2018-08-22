@@ -10,7 +10,6 @@ Feature: A visitor needs to become a registered user in order to read the articl
 
     Scenario: Visitor registers
         When I am on the 'Landing' page
-        Then show me the page
         And I click on 'Registration'
         Then I am on the 'Registration' page
         And I fill in 'Email' field with 'pablo@test.com'
