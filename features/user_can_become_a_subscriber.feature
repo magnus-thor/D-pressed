@@ -11,6 +11,8 @@ Feature: User can become a Subscriber
 
     Scenario: Basic_user presses button to become a Subscriber
         When I am on the 'User' page
-        And I click 'Subscribe' button
+        And my user role is displayed as 'basic_user'
+        Then I click 'Subscribe' button
         Then I should see 'You have succesfully subscribed to D-pressed'
-        And my User 'role' should be 'subscriber'
+        And my user should be 'subscriber'
+        And I should be on the 'User' page
