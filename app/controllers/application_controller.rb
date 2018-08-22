@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
     private
 
     def access_denied
-        redeirect_to root_path, notice: 'Access denied'
+        redirect_to root_path, notice: 'Access denied'
     end
 end
