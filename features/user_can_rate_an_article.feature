@@ -20,7 +20,8 @@ Feature: User can rate an article
         And I should see "This is so sad"
         And I should see "A recent report suggest that news are mostly sad. Which is sad"
         And I should see "Published on: 2018-08-18"
-        And I click "5" on rating
+        And I click "1" on rating
+        Then show me the page
         Then I should see "Thank you, for your vote"
-        And the average rating for "This is so sad" should be "5"
+        And the average rating for "This is so sad" should be "1"
 

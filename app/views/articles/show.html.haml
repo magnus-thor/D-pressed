@@ -9,12 +9,21 @@
   = @article.body
 
 %p
-  %strong Text:
-  = @article.created_at.to_date
-
-%p
-  #Rate
+#rating
   Rate
-  - 5.times do |i|
-    = button_tag "#{i + 1}", data: {rating: "#{i + 1}"}
+  - 5.times do |rate|
+    = button_tag "#{rate + 1}", data: {rating: "#{rate + 1}"}
 
+:javascript
+  let buttons = document.querySelectorAll('button')
+  let rating = document.querySelector('#rating')
+  button.forEach((button) => {
+    button.addEventListener('click',(event) =>{
+      let value = button.dataset.rating
+
+
+    }).then(function(response) {
+      return response([:notice]); //?????
+
+    }
+  }
