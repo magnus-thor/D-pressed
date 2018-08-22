@@ -9,8 +9,8 @@ Feature: User can view the full article
         | title          | body                                                             | 
         | This is so sad | A recent report suggest that news are mostly sad. Which is sad.  |
         And the following user exists
-        | email          | password    |
-        | pablo@test.com | my-password |
+        | email          | password    | role       |
+        | pablo@test.com | my-password | subscriber |
         And I am logged in as 'pablo@test.com'
 
     Scenario:

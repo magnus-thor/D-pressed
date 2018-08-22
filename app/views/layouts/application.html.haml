@@ -9,12 +9,9 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     %nav
-    - if current_user.author? || current_user.editor?
       = link_to 'New Article', new_article_path
+
     = flash[:notice]
     = flash[:error]
     = notice
     = yield
-
-
-
