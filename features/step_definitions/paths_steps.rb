@@ -14,9 +14,7 @@ def page_path(path)
         new_user_registration_path
     elsif path == 'Login'
         new_user_session_path
-    elsif path == 'New Article'
-        new_article_path
-    elsif path == 'Create Article'
+    elsif path == 'Create Article' || path == 'New Article'
         new_article_path
     else
         root_path
