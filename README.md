@@ -4,7 +4,8 @@
 
 ## Sad news for a sad world - June 2018 NewsRoom challenge
 
-### https://d-pressed.herokuapp.com/
+###  [I'm an inline-style link with title](https://d-pressed.herokuapp.com/ "Dpressed Homepage")
+
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
