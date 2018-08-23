@@ -29,6 +29,4 @@ RSpec.describe ArticlePolicy do
 
         it { is_expected.to permit_actions [:index, :show, :create, :new] }
     end
-
-
 end

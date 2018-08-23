@@ -15,4 +15,5 @@ class ArticlePolicy < ApplicationPolicy
   def show?
     !current_user.basic_user?
   end
+  
 end

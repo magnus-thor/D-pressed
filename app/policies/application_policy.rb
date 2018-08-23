@@ -5,4 +5,5 @@ class ApplicationPolicy
     @current_user = current_user
     @record = record
   end
+  
 end
