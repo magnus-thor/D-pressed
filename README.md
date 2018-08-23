@@ -1,5 +1,7 @@
 # D-pressed
 
+[![Coverage Status](https://coveralls.io/repos/github/CraftAcademy/D-pressed/badge.svg?branch=Development)](https://coveralls.io/github/CraftAcademy/D-pressed?branch=Development)
+
 ## Sad news for a sad world - June 2018 NewsRoom challenge
 
 ### https://d-pressed.herokuapp.com/
