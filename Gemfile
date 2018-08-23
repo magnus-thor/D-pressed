@@ -15,6 +15,7 @@ gem 'devise'
 gem 'aws-sdk-s3', require: false
 gem 'faker'
 gem 'pundit'
+gem 'webpacker', '~> 3.4'
 
 group :development, :test do
   gem 'chromedriver-helper'
