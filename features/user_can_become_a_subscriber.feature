@@ -18,10 +18,10 @@ Feature: User can become a Subscriber
         Then I should see 'You have succesfully subscribed to D-pressed'
         Then I should see 'subscriber'
         And my user role is 'subscriber'
-        And I should be on the 'User' page
+        And I should be on the 'My account' page
 
     Scenario: Subcsriber presses button to become a Subscriber
         When I am logged in as 'sub@scriber.se'
-        And I am on the 'User' page
+        And I am on the 'My account' page
         Then I should see 'subscriber'
-        And I should NOT see 'Subscribe'
+        And I should NOT see 'Subscribe' button

@@ -2,7 +2,7 @@ Then("I should see {string}") do |content|
     expect(page).to have_content content
 end
 
-Then("I should NOT see {string}") do |content|
+Then("I should NOT see {string} button") do |content|
     expect(page).not_to have_content content 
 end
 
