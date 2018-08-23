@@ -31,5 +31,3 @@ Feature: User can view the full article
         And I should see "This is so sad"
         And I should see "A recent report suggest that news are mostly sad. Which is sad"
         And I should see "Published on: 2018-08-18"
-
-        

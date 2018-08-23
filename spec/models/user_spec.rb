@@ -31,6 +31,7 @@ RSpec.describe User, type: :model do
     it 'basic_user responds false if role is not basic_user' do
       expect(subscriber.basic_user?).to eq false
     end
+    
     it 'subscriber responds true if role is subscriber' do
       expect(subscriber.subscriber?).to eq true
     end
