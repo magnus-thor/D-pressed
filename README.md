@@ -23,3 +23,20 @@ In order to run the platform after cloning, you need to run bundler using:
 Database need to be created, migrated and seed loaded using the following
 
 `rails db:create db:migrate db:setup`
+
+## Running the tests
+Dpressed uses Cucumber for acceptance test and Rspec for unit test.
+
+To run the tests individually, use the following:
+
+acceptance test:
+
+`bundle exec cucumber`
+
+unit test:
+
+`bundle exec rspec`
+
+To run both tests in one command, run:
+
+`bundle exec rake`
