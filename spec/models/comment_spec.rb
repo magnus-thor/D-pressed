@@ -12,6 +12,11 @@ RSpec.describe Comment, type: :model do
 
   describe 'Associations' do  
     it {is_expected.to belong_to :article}
-    it {is_expected.to belong_to :user}
   end
 
+  describe "Factory" do
+    it "for :comment is valid" do
+      expect(create(:comment)).to be_valid
+    end
+  end
+end
