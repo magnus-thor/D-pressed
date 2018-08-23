@@ -16,6 +16,7 @@ Feature: Internal administration page for user
         And I click on 'My account'
         Then I should be redirected to the 'My account' page
         And I click on 'Edit my account'
+        Then I should be redirected to the 'Edit my account' page
         And I fill in 'Email' field with 'pablo@test.com'
         And I fill in 'password' field with 'my-password'
         And I fill in 'Current password' field with 'my-password'
