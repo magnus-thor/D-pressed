@@ -9,9 +9,7 @@ Feature: Internal administration page for user
         | pablo@test.com |
         And I am logged in as 'pablo@test.com'
 
-
-
-    Scenario: Visitor registers
+    Scenario:
         When I am on the 'Landing' page
         And I click on 'My account'
         Then I should be redirected to the 'My account' page
