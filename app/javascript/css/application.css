@@ -44,6 +44,16 @@
   *
   * @import "tailwindcss/utilities";
   */
+
+  .article_card {
+    /* @apply btn; */
+    background-color: blue;
+  }
+
+  /* .article_card:flex {
+    @apply lg;
+  } */
+
  @tailwind utilities;
  
  /**
