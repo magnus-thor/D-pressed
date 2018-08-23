@@ -14,3 +14,8 @@
   = form.label :comment
   = form.text_field :comment
   = form.submit 'Leave comment'
+
+%p
+- if @article.comments.any?
+  - @article.comments.each do |comment|
+    %p= comment.content
