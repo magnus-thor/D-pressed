@@ -2,6 +2,10 @@ Then("I should see {string}") do |content|
     expect(page).to have_content content
 end
 
+Then("I should NOT see {string}") do |content|
+    expect(page).not_to have_content content 
+end
+
 And("there should be a Article titled {string} in the database") do |expected_title|
     expect(Article.last.title).to eq expected_title
 end
@@ -34,4 +38,12 @@ end
 Then("I should be on the show page for {string}") do |article_title|
     article = Article.find_by(title: article_title)
     expect(current_path).to eq article_path(article)
+end
+
+Then("my user role is {string}") do |expected_role|
+    expect(User.first.role).to eq expected_role
+end
+
+Then("I should be on the {string} page") do |page|
+    expect(current_path).to eq page_path(page)    
 end

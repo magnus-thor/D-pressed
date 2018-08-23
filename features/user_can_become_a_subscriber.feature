@@ -12,14 +12,15 @@ Feature: User can become a Subscriber
     Scenario: Basic_user presses button to become a Subscriber
         When I am logged in as 'pablo@test.com'
         And I am on the 'My account' page
-        Then my user role should be displayed as 'basic_user'
+        Then I should see 'basic_user'
         And I click 'Subscribe' button
         Then I should see 'You have succesfully subscribed to D-pressed'
-        And my user role should be displayed as 'subscriber'
+        Then I should see 'subscriber'
+        And my user role is 'subscriber'
         And I should be on the 'User' page
 
     Scenario: Subcsriber presses button to become a Subscriber
         When I am logged in as 'sub@scriber.se'
         And I am on the 'User' page
-        Then my user role is displayed as 'subscriber'
-        And I should not see the 'Subscribe' button
+        Then I should see 'subscriber'
+        And I should NOT see 'Subscribe'
