@@ -24,4 +24,5 @@ Feature: User can become a Subscriber
         When I am logged in as 'sub@scriber.se'
         And I am on the 'My account' page
         Then I should see 'subscriber'
-        And I should NOT see 'Subscribe' button
+        And I click 'Subscribe' button
+        Then I should see 'You are already subscribed'
