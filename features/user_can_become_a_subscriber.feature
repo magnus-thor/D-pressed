@@ -22,7 +22,4 @@ Feature: User can become a Subscriber
         When I am logged in as 'sub@scriber.se'
         And I am on the 'User' page
         Then my user role is displayed as 'subscriber'
-        And I click 'Subscribe' button
-        Then I should see 'You are already subscribed'
-        And my user role should be displayed as 'subscriber'
-        And I should be on the 'User' page
+        And I should not see the 'Subscribe' button
