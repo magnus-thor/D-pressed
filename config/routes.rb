@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   root controller: :articles, action: :index
   resources :articles, only: [:create, :new, :show]
   resources :users, only: [:show]
+
+  resources :articles do
+    resources :comments
+  end
 end
