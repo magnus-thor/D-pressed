@@ -6,8 +6,8 @@ Feature: Author can attach an image to the article
 
     Background:
         Given the following user exists
-        | email          | password    |
-        | pablo@test.com | my-password |
+        | email          | role   |
+        | pablo@test.com | author |
            
         And the following article exists
         | title          | body                                                             |
