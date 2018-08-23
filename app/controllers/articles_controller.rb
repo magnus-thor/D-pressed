@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     authorize @article
   end
-
+  
   def new
     @article = Article.new
     authorize @article
