@@ -4,7 +4,7 @@
 
 ## Sad news for a sad world - June 2018 NewsRoom challenge
 
-###  [I'm an inline-style link with title](https://d-pressed.herokuapp.com/ "Dpressed Homepage")
+###  [Dpressed](https://d-pressed.herokuapp.com/ "Dpressed Homepage")
 
 
 ## Getting Started
