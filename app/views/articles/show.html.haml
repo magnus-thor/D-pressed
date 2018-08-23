@@ -18,4 +18,5 @@
 %p
 - if @article.comments.any?
   - @article.comments.each do |comment|
+    %p= "Commented by #{comment.user.email}"
     %p= comment.content
