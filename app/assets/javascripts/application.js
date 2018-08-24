@@ -15,41 +15,6 @@
 //= require turbolinks
 //= require_tree .
 
-function handleStarRating(path) {
-    console.log('LOADED!')
-    const ratingStars = document.querySelectorAll('.stars')
-    let noticeDiv = document.querySelector('.notice')
-    let alertDiv = document.querySelector('.alert')
-    let ratingDiv = document.querySelector('#star-rating')
-    Array.from(ratingStars).forEach((star) => {
-        star.addEventListener('click', (event) => {
-            event.preventDefault()
-            let value = event.target.dataset.rating
-            let body = JSON.stringify({ rating: value })
-            fetch(path, {
-                method: 'POST',
-                body: body,
-                credentials: 'include',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-Requested-With': 'XMLHttpRequest',
-                    'X-CSRF-Token': Rails.csrfToken()
-                }
-            }).then(function (response) {
-                return response.json();
-            }).then(function (data) {
-                noticeDiv.innerHTML = data.message
-                ratingDiv.style.display = 'none'
-                console.log(data)
-            }).catch((error) => {
-                alertDiv.innerHTML = data.error
-                console.log(error)
-            });
-        })
-    })
-}
-
-
 function handleRating(path) {
     console.log('LOADED!')
     let ratingButtons = document.querySelectorAll('button')

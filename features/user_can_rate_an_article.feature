@@ -23,6 +23,4 @@ Feature: User can rate an article
         And I should see "Published on: 2018-08-18"
         And I click "1" on rating
         And I wait 1 second
-        Then I should see the notice "Thank you for your vote"
-        And the average rating for "This is so sad" should be "1"
-
+        Then I should see "Thank you for your vote"
