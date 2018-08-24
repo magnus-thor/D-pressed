@@ -22,3 +22,14 @@
 
 :javascript
   handleRating("#{article_ratings_path(@article)}")
+%p
+= form_with url: article_comments_path(@article) do |form|
+  = form.label :comment
+  = form.text_field :comment
+  = form.submit 'Leave comment'
+
+%p
+- if @article.comments.any?
+  - @article.comments.each do |comment|
+    %p= "Commented by #{comment.user.email}"
+    %p= comment.content

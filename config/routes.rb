@@ -7,5 +7,12 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   
   resources :articles, only: [:create, :new, :show]
+  resources :users, only: [:show]
+
+  resources :articles do
+    resources :comments
+  end
+
   resources :users, only: [:show, :update]
+
 end
