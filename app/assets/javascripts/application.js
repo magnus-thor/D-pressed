@@ -16,7 +16,6 @@
 //= require_tree .
 
 function handleRating(path) {
-    console.log('LOADED!')
     let ratingButtons = document.querySelectorAll('button')
     let noticeDiv = document.querySelector('.notice')
     let alertDiv = document.querySelector('.alert')
