@@ -39,10 +39,8 @@ function handleRating(path) {
             }).then(function (data) {
                 noticeDiv.innerHTML = data.message
                 ratingDiv.style.display = 'none'
-                console.log(data)
             }).catch((error) => {
                 alertDiv.innerHTML = data.error
-                console.log(error)
             });
         })
     })
