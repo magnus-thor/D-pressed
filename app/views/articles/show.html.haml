@@ -17,14 +17,7 @@
     = button_tag "#{rate + 1}", data: {rating: "#{rate + 1}"}
 
 
-.stars#star-rating
-  %form{action: ""}
-    - 5.times do |rating|
-      %input{name: "star", type: "radio", id: "star-#{rating + 1}", class: "star star-#{rating + 1} stars", data: {rating: "#{rating + 1}"}}
-      %label{for: "star-#{rating + 1}", class: "star star-#{rating + 1}"}
-   
 
 
 :javascript
   handleRating("#{article_ratings_path(@article)}")
-  handleStarRating("#{article_ratings_path(@article)}")
