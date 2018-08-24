@@ -16,6 +16,8 @@
     %nav
       = link_to t('new_article'), new_article_path
 
+    .notice
+    .alert
     = flash[:notice]
     = flash[:error]
     = yield

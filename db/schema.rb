@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_23_183927) do
+ActiveRecord::Schema.define(version: 2018_08_23_182709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,16 +55,14 @@ ActiveRecord::Schema.define(version: 2018_08_23_183927) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "replies", force: :cascade do |t|
-    t.string "content"
-    t.bigint "comment_id"
-    t.bigint "user_id"
+  create_table "ratings", force: :cascade do |t|
+    t.integer "value"
     t.bigint "article_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["article_id"], name: "index_replies_on_article_id"
-    t.index ["comment_id"], name: "index_replies_on_comment_id"
-    t.index ["user_id"], name: "index_replies_on_user_id"
+    t.index ["article_id"], name: "index_ratings_on_article_id"
+    t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -75,6 +73,7 @@ ActiveRecord::Schema.define(version: 2018_08_23_183927) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "role"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -82,7 +81,6 @@ ActiveRecord::Schema.define(version: 2018_08_23_183927) do
   add_foreign_key "articles", "users"
   add_foreign_key "comments", "articles"
   add_foreign_key "comments", "users"
-  add_foreign_key "replies", "articles"
-  add_foreign_key "replies", "comments"
-  add_foreign_key "replies", "users"
+  add_foreign_key "ratings", "articles"
+  add_foreign_key "ratings", "users"
 end
