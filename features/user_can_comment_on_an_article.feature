@@ -1,7 +1,7 @@
 Feature: User can comment on an article
-    As an Author,
-    In order to provide more value to my readers,
-    I would like to be able to attach an image to the article.
+    As a User,
+    In order to leave my feedback to the article that I have just read,
+    I would like to be able to rate it.
 
     Background:
         Background:
@@ -25,9 +25,7 @@ Feature: User can comment on an article
 
         Scenario: Pablo2 CAN see article page
             When I am logged in as 'pablo2@test.com'
-            And I am on the 'landing' page
-            And I click on "This is so sad"
-            Then I should be on the show page for 'This is so sad'
+            And I am on the 'This is so sad' page
             And I should see "This is so sad"
             And I should see "A recent report suggest that news are mostly sad. Which is sad"
             And I should see "Published on: 2018-08-18"
