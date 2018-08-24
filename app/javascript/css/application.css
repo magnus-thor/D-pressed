@@ -46,13 +46,12 @@
   */
 
   .article_card {
-    /* @apply btn; */
-    background-color: blue;
+    @apply max-w-md w-full; 
   }
 
-  /* .article_card:flex {
-    @apply lg;
-  } */
+  .members_font {
+    @apply text-grey-darker text-base;     
+  }
 
  @tailwind utilities;
  
