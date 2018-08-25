@@ -47,3 +47,7 @@ end
 Then("I should be on the {string} page") do |page|
     expect(current_path).to eq page_path(page)    
 end
+
+When("I select {string} as the category") do |option|
+    select option, from: 'article_category_id'
+end
