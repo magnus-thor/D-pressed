@@ -11,7 +11,7 @@ Given("the following user(s) exist/exists") do |table|
 end
 
 Given("the following categories exist") do |table|
-    table.hashes.each do |user_hash|
-        create(:category, user_hash)
+    table.hashes.each do |category_hash|
+        create(:category, category_hash)
     end
 end
