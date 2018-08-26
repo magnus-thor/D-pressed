@@ -13,10 +13,12 @@ se:
   log_in: Logga in
   characters_minimum: minimum tecken
   create_article: Skapa artikel
-  my account: Mitt konto
+  my_account: Mitt konto
   back: Tillbaka
   cancel_my_account: Säg upp mitt konto
   update: Uppdatera
   new_article: Ny Artikel
   english: Engelsk
   svenska: Svenska
+  edit_my_account: Uppdatera mitt konto
+  subscribe: Prenumerera
