@@ -1,10 +1,11 @@
 !!!
 %html
+
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{content: 'text/html; charset=UTF-8; width=device-width; initial-scale=1', http: {equiv: "Content-Type"}}
     = link_to_unless_current t('english'), locale: "en"
-    = link_to_unless_current t('svenska'), locale: "se"
-    %title DPressed
+    = link_to_unless_current t('svenska'), locale: "se"    
+    %title D-Pressed
     = csrf_meta_tags
     = csp_meta_tag
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
@@ -15,6 +16,9 @@
   %body
     %nav
       = link_to t('new_article'), new_article_path
+      = link_to t('registration') , new_user_registration_path
+      - if current_user 
+        = link_to t('my account'), user_path(current_user)
 
     .notice
     .alert
