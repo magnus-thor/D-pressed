@@ -9,9 +9,15 @@ Feature: User can comment on an article
         Given the following article exist
         | title          | body                                                             | 
         | This is so sad | A recent report suggest that news are mostly sad. Which is sad.  |
-        | This is so fun | A recent report suggest that news are mostly fun. Which is fun.  |
+        
+        And the following categories exist
+        | name     |
+        | Politics |
+        | Economy  |
+        | Science  |
+        | Sports   |
 
-        And the following user exists
+        And the following user exists   
         | email             | role       |
         | pablo@test.com    | basic_user |
         | pablo2@test.com   | subscriber |
@@ -20,6 +26,7 @@ Feature: User can comment on an article
             When I am logged in as 'pablo@test.com'
             And I am on the 'landing' page
             And I click on "This is so sad"
+            Then show me the page
             Then I should see 'Access denied'
             Then I should be redirected to the 'landing' page
 

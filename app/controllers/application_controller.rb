@@ -12,10 +12,10 @@ class ApplicationController < ActionController::Base
     def load_categories
         @categories = Category.all
     end
-    
+
     def access_denied
         redirect_to root_path, notice: 'Access denied'
-    end
+    end 
 
     def set_locale
         I18n.locale = params[:locale] || I18n.default_locale

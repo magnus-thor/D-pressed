@@ -1,5 +1,5 @@
 Then("I should see {string}") do |content|
-    expect(page).to have_content content
+    find('body').has_content?
 end
 
 Then("I should NOT see {string} button") do |content|

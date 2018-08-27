@@ -5,7 +5,7 @@ FactoryBot.define do
         user
         category
         after(:build) do |article|
-            article.image.attach(io: File.open(Rails.root.join('spec', 'fixtures', 'dummy.jpeg')), filename: "image.jpeb", content_type: 'image/jpg')
+            article.image.attach(io: File.open(Rails.root.join('spec', 'fixtures', 'dummy.jpeg')), filename: "image.jpeg", content_type: 'image/jpg')
         end
     end
 end

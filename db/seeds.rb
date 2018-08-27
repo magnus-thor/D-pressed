@@ -9,27 +9,7 @@ politics = Category.create(name: 'Politics')
 sports = Category.create(name: 'Sports')
 science = Category.create(name: 'Science')
 
-
-
-Article.create(title: Faker::Book.title, 
-    body: Faker::Lorem.paragraphs(5),
-    user: user,
-    category: science)
-
-Article.create(title: Faker::Book.title, 
-    body: Faker::Lorem.paragraphs(5),
-    user: user,
-    category: sports)
-
-Article.create(title: Faker::Book.title, 
-    body: Faker::Lorem.paragraphs(5),
-    user: user,
-    category: politics)
-
-Article.create(title: Faker::Book.title, 
-    body: Faker::Lorem.paragraphs(5),
-    user: user,
-    category: economy)
+editor = User.create(email: 'editor@dpressed.se', password: '1234qwer', role: 'editor')
 
 Article.create(title: Faker::Book.title, 
     body: Faker::Lorem.paragraphs(5),
