@@ -1,9 +1,6 @@
 .right_ad{:style => "float:right;"}
   = link_to image_tag("ad_vertical_placeholder.png"), "https://craftacademy.se/"
 %br/
-
-- @categories.each do |category|
-  %h3= category.name
   
 - @articles.each do |article|
   .article_card.lg.flex
