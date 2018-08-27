@@ -2,15 +2,15 @@
 %html
 
   %head
-    %meta{content: 'text/html; charset=UTF-8; width=device-width; initial-scale=1', http: {equiv: "Content-Type"}} 
-    %title D-Pressed
+
+    %meta{content: 'text/html; charset=UTF-8', http: {equiv: "Content-Type"}}
+    %title DPressed
+
     = csrf_meta_tags
     = csp_meta_tag
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-
     = javascript_pack_tag 'application'
     = stylesheet_pack_tag 'application'
-
   %body
     %nav
       = link_to_unless_current t('english'), locale: "en"
