@@ -6,8 +6,8 @@ Feature: Create article
 
     Background:
         Given the following user exists
-            | email          | password    |
-            | pablo@test.com | my-password |
+            | email          | role   |
+            | pablo@test.com | author |
         And the date is "2018-08-19"
         And I am logged in as 'pablo@test.com'
         And I visit the Create article page
@@ -22,7 +22,8 @@ Feature: Create article
         Then there should be a Article titled 'My sad news story' in the database
         And I should see 'Article successfully created'
         And I should see 'My sad news story'
-        And I should see 'Published on: 2018-08-19'
+        And I should see 'Published on'
+        And I should see '2018-08-19'
 
     Scenario: User does not fill in Title [Sad path]
         When I fill in 'Body' field with 'Here is bodytext if a long sad news article'

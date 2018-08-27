@@ -16,11 +16,19 @@ RSpec.describe Article, type: :model do
 
   describe 'Associations' do  
     it {is_expected.to belong_to :user}
+    it {is_expected.to have_many :ratings}
   end
 
   describe 'Factory' do
     it 'should have valid Factory' do
       expect(create(:article)).to be_valid 
+    end
+  end
+
+  describe 'Attachment' do
+    it 'is valid  ' do
+      subject.image.attach(io: File.open(fixture_path + '/dummy.jpeg'), filename: 'attachment.jpg', content_type: 'image/jpeg')
+      expect(subject.image).to be_attached
     end
   end
 end

@@ -1,3 +1,4 @@
+%p= image_tag @article.image
 %p
   %strong Title:
   = @article.title
@@ -8,7 +9,25 @@
   %strong Text:
   = @article.body
 
-%p
-  %strong Text:
-  = @article.created_at.to_date
+#rating
+  %p
+    Rate  
+  - 5.times do |rate|
+    = button_tag "#{rate + 1}", data: {rating: "#{rate + 1}"}
 
+
+
+
+:javascript
+  handleRating("#{article_ratings_path(@article)}")
+%p
+= form_with url: article_comments_path(@article) do |form|
+  = form.label :comment
+  = form.text_field :comment
+  = form.submit 'Leave comment'
+
+%p
+- if @article.comments.any?
+  - @article.comments.each do |comment|
+    %p= "Commented by #{comment.user.email}"
+    %p= comment.content
