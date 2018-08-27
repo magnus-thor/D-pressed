@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-  before_action :load_categories
   
   def index
     @articles = Article.all
@@ -27,10 +26,6 @@ class ArticlesController < ApplicationController
   end
   
   private
-   
-  def load_categories
-    @categories = Category.all
-  end
 
   def article_params
     params.require(:article).permit(:title, :body, :image, :category_id)

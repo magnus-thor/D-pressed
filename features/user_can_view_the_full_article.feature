@@ -11,6 +11,13 @@ Feature: User can view the full article
         | This is so sad | A recent report suggest that news are mostly sad. Which is sad.  |
         | This is so fun | A recent report suggest that news are mostly fun. Which is fun.  |
 
+        And the following categories exist
+        | name     |
+        | Politics |
+        | Economy  |
+        | Science  |
+        | Sports   |
+
         And the following user exists
         | email             | role       |
         | pablo@test.com    | basic_user |
