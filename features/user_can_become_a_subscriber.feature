@@ -13,16 +13,16 @@ Feature: User can become a Subscriber
     Scenario: Basic_user presses button to become a Subscriber
         When I am logged in as 'pablo@test.com'
         And I am on the 'My account' page
-        Then I should see 'basic_user'
+        Then I should see 'Basic user'
         And I click 'Subscribe' button
         Then I should see 'You have succesfully subscribed to D-pressed'
-        Then I should see 'subscriber'
+        Then I should see 'Subscriber'
         And my user role is 'subscriber'
         And I should be on the 'My account' page
 
     Scenario: Subcsriber presses button to become a Subscriber
         When I am logged in as 'sub@scriber.se'
         And I am on the 'My account' page
-        Then I should see 'subscriber'
+        Then I should see 'Subscriber'
         And I click 'Subscribe' button
         Then I should see 'You are already subscribed'
