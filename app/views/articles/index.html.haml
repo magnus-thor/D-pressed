@@ -12,7 +12,7 @@
         = link_to article.title, article_path(article)
         .text-black.font-bold.text-s.mb-2= article.category.name
         %p.text-grey-darker.text-base
-          = truncate(article.body, length: 50) { link_to ' (continued)', article_path(article)} 
+          = truncate(article.body, length: 150) { link_to ' (continued)', article_path(article)} 
       .flex.items-center
         .text-sm
           %p.text-black.leading-none 
