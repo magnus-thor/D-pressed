@@ -4,7 +4,6 @@
         %ul.md:flex.md:items-center.list-reset.text-xl
             %li.border-t.md:border-0.md:ml-4
                 - unless current_user
-                    .container-registration
                     %a.block.md:inline.no-underline.py-4.px-4.md:py-0.text-white.hover:text-grey-lighter   
                         = link_to t('registration'), new_user_registration_path
                     %a.block.md:inline.no-underline.py-4.px-4.md:py-0.text-white.hover:text-grey-lighter   
