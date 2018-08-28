@@ -1,15 +1,15 @@
-%h2
+%h2.m-4.text-black.text-center
   Edit #{resource_name.to_s.humanize}
 = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
   = devise_error_messages!
-  .field
+  .field.block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
     = f.label :email
     %br/
     = f.email_field :email, autofocus: true, autocomplete: "email"
   - if devise_mapping.confirmable? && resource.pending_reconfirmation?
     %div
       Currently waiting confirmation for: #{resource.unconfirmed_email}
-  .field
+  .field.block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
     = f.label :password
     %i (leave blank if you don't want to change it)
     %br/
@@ -19,18 +19,22 @@
       %em
         = @minimum_password_length
         characters minimum
-  .field
+  .field.block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
     = f.label :password_confirmation
     %br/
     = f.password_field :password_confirmation, autocomplete: "new-password"
-  .field
+  .field.block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
     = f.label :current_password
     %i (we need your current password to confirm your changes)
     %br/
     = f.password_field :current_password, autocomplete: "current-password"
-  .actions
+    %br/
+  .actions.block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
     = f.submit t('update')
-%h3 Cancel my account
-%p
-  Unhappy? #{button_to t('cancel_my_account'), registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
-= link_to t('back'), :back
+%p.m-4.text-black.text-center
+  Unhappy? 
+.field.block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
+  #{button_to t('cancel_my_account'), registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
+%br/
+.text-black.text-center
+  = link_to t('back'), :back

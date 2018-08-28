@@ -1,16 +1,24 @@
 = form_with model: @article, local: true do |form|
-  = form.label :title
+  .block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
+    = form.label :title
   %br/
-  = form.text_field :title
+  .block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
+    = form.text_field :title
   %br/
-  = form.collection_select :category_id, @categories, :id, :name
+  .block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
+    = form.collection_select :category_id, @categories, :id, :name
   %br/
-  = form.label :body
+  .block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
+    = form.label :body
   %br/
-  = form.text_area :body
+  .block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
+    = form.text_area :body
   %br/
-  = form.file_field :image
+  .block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
+    = form.file_field :image
   %br/
-  = form.submit t('create_article')
+  .block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
+    = form.submit t('create_article')
 
-= link_to t('back'), articles_path
+.block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
+  = link_to t('back'), articles_path

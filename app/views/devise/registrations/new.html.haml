@@ -1,21 +1,22 @@
-%h2= t('sign_up')
+%h2.m-4.text-black.text-center
+  = t('sign_up')
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = devise_error_messages!
-  .field
+  .field.block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
     = f.label :email
-    %br/
+    %br/ 
     = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
+  .field.block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
     = f.label t(:password)
     - if @minimum_password_length
       %em 
         "#{@minimum_password_length} #{t('characters_minimum')}"
     %br/
     = f.password_field t(:password), autocomplete: t("new-password")
-  .field
+  .field.block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
     = f.label t(:password_confirmation)
     %br/
     = f.password_field t(:password_confirmation), autocomplete: "new-password"
-  .actions
+  %br/
+  .actions.text-center
     = f.submit t('sign_up')
-= render "devise/shared/links"
