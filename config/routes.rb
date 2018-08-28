@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :articles do
     resources :comments
+    resources :categories
   end
 
   scope "(:locale)", locale: /en|se/ do

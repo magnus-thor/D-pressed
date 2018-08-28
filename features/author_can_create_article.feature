@@ -6,16 +6,24 @@ Feature: Create article
 
     Background:
         Given the following user exists
-            | email          | role   |
-            | pablo@test.com | author |
+        | email          | role   |
+        | pablo@test.com | author |
+        And the following categories exist
+        | name     |
+        | Politics |
+        | Economy  |
+        | Science  |
+        | Sports   |
         And the date is "2018-08-19"
         And I am logged in as 'pablo@test.com'
         And I visit the Create article page
 
 
     Scenario: Successfully create Article [Happy path]
-        When I fill in 'Title' field with 'My sad news story'
+        When I fill in 'Title' field with 'My sad news story'        
+        And I select "Science" as the category
         And I fill in 'Body' field with 'Here is bodytext if a long sad news article'
+        And I attach an image-file
         And I click on 'Create Article'
         Then I wait 1 second
         And I should be redirected to the 'landing' page

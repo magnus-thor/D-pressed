@@ -1,7 +1,7 @@
 en:
   flash[:error]: Fields can\'t be blank. Your article could not be saved
   article_successfully_created: Article successfully created.
-  published_on: Published on
+  published_on: 'Published on:'
   registration: Registration
   password: password
   characters_minimum: characters minimum
