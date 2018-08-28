@@ -13,9 +13,7 @@
     .flex.items-center
       .text-sm
         %p.text-black.leading-none 
-          = t('published_on')
-        %div.text-grey-dark= @article.created_at.to_date
-
+          = [t('published_on'), @article.created_at.to_date].join(' ') 
         #rating
           %p
             Rate  

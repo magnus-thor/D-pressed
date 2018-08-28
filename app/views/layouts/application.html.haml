@@ -25,10 +25,10 @@
         - if current_user.author? || current_user.editor?
           = link_to t('new_article'), new_article_path
       
-= render 'shared/navbar' 
+    = render 'shared/navbar' 
 
-.notice
-.alert
-= flash[:notice]
-= flash[:error]
-= yield
+    .notice
+      = flash[:notice]
+    .alert
+      = flash[:error]
+    = yield
