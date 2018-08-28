@@ -12,21 +12,9 @@
     = javascript_pack_tag 'application'
     = stylesheet_pack_tag 'application'
   %body
-    %nav
-      = link_to_unless_current t('english'), locale: "en"
-      = link_to_unless_current t('svenska'), locale: "se" 
-      = link_to 'D-pressed', root_path  
-      - unless current_user
-        = link_to t('registration'), new_user_registration_path
-        = link_to t('log_in'), new_user_session_path
-      - if user_signed_in?   
-        = link_to t('my_account'), user_path(current_user)
-        = link_to t('log_out'), destroy_user_session_path, method: :delete
-        - if current_user.author? || current_user.editor?
-          = link_to t('new_article'), new_article_path
-      
+    = render 'shared/links_navbar'
     .notice
+      = flash[:notice]
     .alert
-    = flash[:notice]
-    = flash[:error]
+      = flash[:error]
     = yield

@@ -1,33 +1,36 @@
-%p= image_tag @article.image
-%p
-  %strong Title:
-  = @article.title
-%p
-  Published on:
-  = @article.created_at.to_date
-%p
-  %strong Text:
-  = @article.body
+= render 'shared/categories_navbar'
+.article_card.lg.flex
+  .h-48.lg:h-auto.lg:w-48.flex-none.bg-cover.rounded-t.lg:rounded-t-none.lg:rounded-l.text-center.overflow-hidden
+    - if @article.image.attached?
+      = image_tag @article.image
+  .border-r.border-b.border-l.border-grey-light.lg:border-l-0.lg:border-t.lg:border-grey-light.bg-white.rounded-b.lg:rounded-b-none.lg:rounded-r.p-4.flex.flex-col.justify-between.leading-normal
+    .mb-8
+      .text-black.font-bold.text-xl.mb-2
+      = @article.title
+      .text-black.font-bold.text-s.mb-2
+      = @article.category.name
+      %p.text-grey-darker.text-base
+        = @article.body
+    .flex.items-center
+      .text-sm
+        %p.text-black.leading-none 
+          = [t('published_on'), @article.created_at.to_date].join(' ') 
+        #rating
+          %p
+            Rate  
+          - 5.times do |rate|
+            = button_tag "#{rate + 1}", data: {rating: "#{rate + 1}"}
 
-#rating
-  %p
-    Rate  
-  - 5.times do |rate|
-    = button_tag "#{rate + 1}", data: {rating: "#{rate + 1}"}
+        :javascript
+          handleRating("#{article_ratings_path(@article)}")
+        %p
+        = form_with url: article_comments_path(@article) do |form|
+          = form.label :comment
+          = form.text_field :comment
+          = form.submit 'Leave comment'
 
-
-
-
-:javascript
-  handleRating("#{article_ratings_path(@article)}")
-%p
-= form_with url: article_comments_path(@article) do |form|
-  = form.label :comment
-  = form.text_field :comment
-  = form.submit 'Leave comment'
-
-%p
-- if @article.comments.any?
-  - @article.comments.each do |comment|
-    %p= "Commented by #{comment.user.email}"
-    %p= comment.content
+        %p
+        - if @article.comments.any?
+          - @article.comments.each do |comment|
+            %p= "Commented by #{comment.user.email}"
+            %p= comment.content

@@ -19,6 +19,8 @@ module DPressed
     config.i18n.available_locales [:se, :en]
     config.i18n.default_locale :en
 
+    config.i18n.default_locale :en
+
     config.generators do |generate|
       generate.helper false
       generate.assets false
