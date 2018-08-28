@@ -10,7 +10,6 @@ class ApplicationController < ActionController::Base
     private
 
     def load_categories
-        binding.pry
         @categories = Category.all
     end
 
