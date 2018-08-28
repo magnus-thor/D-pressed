@@ -69,4 +69,26 @@
   * @import "utilities/background-patterns";
   * @import "utilities/skew-transforms";
   */
+ a:link {
+   text-decoration: none;
+   color: black;
+ }
+
+ a:visited {
+  text-decoration: none;
+  color: dark-grey;  
+ } 
+
+ a:active {
+  text-decoration: none;
+  color: yellow;
+ }
+ a:hover {
+   color: hotpink; 
+   text-decoration: underline;
+ }
  
+ body {
+  color: lightgray;   
+ }
+               
