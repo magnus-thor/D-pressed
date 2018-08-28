@@ -12,11 +12,18 @@ Feature: Author can attach an image to the article
         And the following article exists
         | title          | body                                                             |
         | This is so sad | A recent report suggest that news are mostly sad. Which is sad.  |
+        And the following categories exist
+        | name     |
+        | Politics |
+        | Economy  |
+        | Science  |
+        | Sports   |
         And I am logged in as 'pablo@test.com'
         And I visit the Create article page
 
         Scenario: Successfully create Article [Happy path]
         When I fill in 'Title' field with 'My sad news story'
+        And I select "Science" as the category
         And I fill in 'Body' field with 'Here is bodytext if a long sad news article'
         And I attach an image-file
         And I click on 'Create Article'

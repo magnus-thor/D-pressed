@@ -20,7 +20,8 @@ Feature: User can rate an article
         Then I am on the "This is so sad" page
         And I should see "This is so sad"
         And I should see "A recent report suggest that news are mostly sad. Which is sad"
-        And I should see "Published on: 2018-08-18"
+        And I should see "Published on"
+        And I should see "2018-08-18"
         And I click "1" on rating
         And I wait 1 second
         Then I should see "Thank you for your vote"
