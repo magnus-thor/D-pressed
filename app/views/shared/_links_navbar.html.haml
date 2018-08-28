@@ -3,18 +3,17 @@
         %h1.mb-4.md:mb-0.text-2xl= link_to 'D-pressed', root_path 
         %ul.md:flex.md:items-center.list-reset.text-xl
             %li.border-t.md:border-0.md:ml-4
-            %a.block.md:inline.no-underline.py-4.px-4.md:py-0.text-white.hover:text-grey-lighter
-                = link_to_unless_current t('english'), locale: "en"
-                = link_to_unless_current t('svenska'), locale: "se" 
-            - unless current_user
+                - unless current_user
+                    %a.block.md:inline.no-underline.py-4.px-4.md:py-0.text-white.hover:text-grey-lighter
+                        = link_to t('registration'), new_user_registration_path
+                        = link_to t('log_in'), new_user_session_path  
+                - if user_signed_in?
+                    %a.block.md:inline.no-underline.py-4.px-4.md:py-0.text-white.hover:text-grey-lighter   
+                        = link_to t('my_account'), user_path(current_user)
+                        = link_to t('log_out'), destroy_user_session_path, method: :delete                
+                    - if current_user.author? || current_user.editor?
+                        %a.block.md:inline.no-underline.py-4.px-4.md:py-0.text-white.hover:text-grey-lighter  
+                            = link_to t('new_article'), new_article_path
                 %a.block.md:inline.no-underline.py-4.px-4.md:py-0.text-white.hover:text-grey-lighter
-                    = link_to t('registration'), new_user_registration_path
-                    = link_to t('log_in'), new_user_session_path  
-            - if user_signed_in?
-                %a.block.md:inline.no-underline.py-4.px-4.md:py-0.text-white.hover:text-grey-lighter   
-                    = link_to t('my_account'), user_path(current_user)
-                    = link_to t('log_out'), destroy_user_session_path, method: :delete                
-                - if current_user.author? || current_user.editor?
-                    %a.block.md:inline.no-underline.py-4.px-4.md:py-0.text-white.hover:text-grey-lighter  
-                        = link_to t('new_article'), new_article_path                        
-           
+                    = link_to_unless_current t('english'), locale: "en"
+                    = link_to_unless_current t('svenska'), locale: "se"   
