@@ -7,7 +7,7 @@ Feature: User can comment on an article
         Given the date is "2018-08-18"
         And the following article exist
         | title          | body                                                             | 
-        | This is so fun | A recent report suggest that news are mostly sad. Which is sad.  |
+        | This is so sad | A recent report suggest that news are mostly sad. Which is sad.  |
         
         And the following categories exist
         | name     |
@@ -25,14 +25,14 @@ Feature: User can comment on an article
             When I am logged in as 'pablo@test.com'
             And I am on the 'landing' page
             And I click on "This is so sad"
-            #Then I should see 'Access denied'
+            Then I should see 'Access denied'
             Then I should be redirected to the 'landing' page
 
         Scenario: Pablo2 CAN see article page
             When I am logged in as 'pablo2@test.com'
-            And I am on the 'This is so fun' page
+            And I am on the 'This is so sad' page
             Then show me the page
-            And I should see "This is so fun"
+            And I should see "This is so sad"
             And I should see "A recent report suggest that news are mostly sad. Which is sad"
             And I should see "Published on: 2018-08-18"
             And I fill in "Comment" field with "That's interesting"

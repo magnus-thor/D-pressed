@@ -37,4 +37,5 @@ Feature: User can view the full article
         Then I should be on the show page for 'This is so sad'
         And I should see "This is so sad"
         And I should see "A recent report suggest that news are mostly sad. Which is sad"
-        And I should see "Published on: 2018-08-18"
+        And I should see "Published on"
+        And I should see "2018-08-18"
