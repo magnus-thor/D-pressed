@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
     include Pundit
     protect_from_forgery
     rescue_from Pundit::NotAuthorizedError, with: :access_denied
-    before_action :load_categories
 
 
 
