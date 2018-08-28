@@ -12,7 +12,7 @@
     .border-r.border-b.border-l.border-grey-light.lg:border-l-0.lg:border-t.lg:border-grey-light.bg-white.rounded-b.lg:rounded-b-none.lg:rounded-r.p-4.flex.flex-col.justify-between.leading-normal
       .mb-8
         = link_to article.title, article_path(article)
-        .text-black.font-bold.text-s.mb-2= article.category.name
+        .text-black.font-bold.text-s.mb-2= article&.category&.name
         %p.text-grey-darker.text-base
           = truncate(article.body, length: 150) { link_to ' (continued)', article_path(article)} 
       .flex.items-center
