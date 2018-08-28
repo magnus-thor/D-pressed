@@ -82,13 +82,17 @@
  a:active {
   text-decoration: none;
   color: yellow;
+  box-shadow: none;
+  top: 5px;
  }
  a:hover {
    color: hotpink; 
    text-decoration: underline;
+   cursor: pointer;
+   box-shadow: 5px;
  }
  
  body {
   color: lightgray;   
  }
-               
+                                               
