@@ -31,13 +31,12 @@ RSpec.describe 'User Registration', type: :request do
                 email: 'me@mail', password: 'whatever',
                 password_confirmation: 'whatever'
             }, headers: headers
-
             expect(JSON.parse(response.body)['errors']['email']).to eq ['is not an email']
             expect(response.status).to eq 422
         end
 
         it 'an already registered email' do
-            FactoryBot.create(:user, email: 'me@email.com',
+            create(:user, email: 'me@email.com',
                             password: 'whatever',
                             password_confirmation: 'whatever')
 
