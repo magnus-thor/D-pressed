@@ -11,10 +11,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'haml-rails'
-gem 'devise'
 gem 'faker'
 gem 'pundit'
 gem 'webpacker', '~> 3.4'
+gem 'rack-cors', require: 'rack/cors'
+gem 'devise_token_auth'
 
 group :development, :test do
   gem 'chromedriver-helper'
