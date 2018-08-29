@@ -44,6 +44,15 @@
   *
   * @import "tailwindcss/utilities";
   */
+  .field {
+    @apply block text-black m-2 font-bold pr-4 mb-1 
+  }
+
+  @screen md {
+    .field {
+      @apply text-center mb-0 
+    }
+  }
 
   .article_card {
     @apply max-w-md w-full; 
@@ -72,6 +81,7 @@
  a:link {
    text-decoration: none;
    color: black;
+   margin: 10px;
  }
 
  a:visited {

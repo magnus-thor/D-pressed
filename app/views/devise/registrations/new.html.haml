@@ -2,18 +2,18 @@
   = t('sign_up')
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = devise_error_messages!
-  .field.block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
+  .field
     = f.label :email
     %br/ 
     = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field.block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
+  .field
     = f.label t(:password)
     - if @minimum_password_length
       %em 
         "#{@minimum_password_length} #{t('characters_minimum')}"
     %br/
     = f.password_field t(:password), autocomplete: t("new-password")
-  .field.block.text-black.m-2.font-bold.md:text-center.mb-1.md:mb-0.pr-4
+  .field
     = f.label t(:password_confirmation)
     %br/
     = f.password_field t(:password_confirmation), autocomplete: "new-password"
