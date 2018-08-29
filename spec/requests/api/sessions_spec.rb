@@ -13,7 +13,7 @@ RSpec.describe 'Sessions', type: :request do
             expected_response = {
                 'data' => {
                     'id' => user.id, 'uid' => user.email, 'email' => user.email,
-                    'provider' => 'email', 'role' => user.role, "latitude"=>nil, "longitude"=>nil
+                    'provider' => 'email', 'role' => user.role
                 }
             }
 
