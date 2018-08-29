@@ -9,6 +9,8 @@ class User < ApplicationRecord
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  
+  include DeviseTokenAuth::Concerns::User
 
   def set_default_role
     self.role ||= :basic_user
