@@ -1,7 +1,7 @@
 %nav.bg-black.text-black.md:py-5
   .container:flex.block.md:items-center.md:justify-between.mx-auto
-    %ul.u-list.text-xl
+    %ul.u-list-navbar.text-xl
       %li.border-t.md:border-0.md:ml-4
         - @categories.each do |category|
-          %a.cat-link  
+          %a.category-link  
             = category.name

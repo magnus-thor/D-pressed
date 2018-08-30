@@ -48,15 +48,15 @@
     @apply block text-black m-2 font-bold pr-4 mb-1; 
   }
 
-  .cat-link {
+  .category-link {
     @apply block no-underline py-5 px-4 text-white;
   }
 
-  .cat-link:hover {
+  .category-link:hover {
     @apply text-grey-lighter;
   }
   
-  .u-list {
+  .u-list-navbar {
     @apply list-reset text-xl;
   }
   .article_card {
@@ -115,10 +115,10 @@
   .field { 
     @apply text-center mb-0;
   }
-  .u-link {
+  .u-link-navbar {
     @apply flex items-center;
   }
-  .cat-link {
+  .category-link {
     @apply inline py-0;
   }
 }

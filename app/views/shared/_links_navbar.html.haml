@@ -5,7 +5,7 @@
         = flash[:error]
     .container.md:flex.md:items-center.md:justify-between.mx-auto.px-5
         %h1.mb-4.md:mb-0.mx-auto.text-2xl= link_to 'D-pressed', root_path 
-        %ul.u-list
+        %ul.u-list-navbar
             %li.border-t.md:border-0.md:ml-4
                 - unless current_user
                     = link_to t('registration'), new_user_registration_path
