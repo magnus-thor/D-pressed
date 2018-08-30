@@ -20,12 +20,12 @@ RSpec.describe 'Api::ArticlesController', type: :request do
         get "/api/articles/#{article.id}", headers: headers
       end
   
-      it 'retuns an instance of Article' do 
+      it 'returns an instance of Article' do 
         expect(JSON.parse(response.body)['title']).to eq 'Rails 5 is awesome!'
       end
     end
 
-    describe 'unauthentited user' do 
+    describe 'unauthenticated user' do 
       before do 
         get "/api/articles/#{article.id}", headers: nil
       end
